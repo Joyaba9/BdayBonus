@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package bryan.payroll;
+import java.util.Date;
 
 /**
  *
@@ -15,8 +16,8 @@ public class CommissionEmployee extends Employee {
    // constructor
    public CommissionEmployee(String firstName, String lastName, 
       String socialSecurityNumber, double grossSales, 
-      double commissionRate) {
-      super(firstName, lastName, socialSecurityNumber);
+      double commissionRate, Date birthDate) {
+      super(firstName, lastName, socialSecurityNumber,birthDate);
 
       if (commissionRate <= 0.0 || commissionRate >= 1.0) { // validate 
          throw new IllegalArgumentException(

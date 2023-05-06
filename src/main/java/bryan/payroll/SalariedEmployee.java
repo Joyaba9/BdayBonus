@@ -4,6 +4,8 @@
  */
 package bryan.payroll;
 
+import java.util.Date;
+
 /**
  *
  * @author joyabryan
@@ -13,8 +15,8 @@ public class SalariedEmployee extends Employee {
 
    // constructor
    public SalariedEmployee(String firstName, String lastName, 
-      String socialSecurityNumber, double weeklySalary) {
-      super(firstName, lastName, socialSecurityNumber); 
+      String socialSecurityNumber, Date birthDate, double weeklySalary) {
+      super(firstName, lastName, socialSecurityNumber,birthDate); 
 
       if (weeklySalary < 0.0) {
          throw new IllegalArgumentException(

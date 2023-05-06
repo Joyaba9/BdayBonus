@@ -4,6 +4,7 @@
  */
 package bryan.payroll;
 
+import java.util.Date;
 /**
  *
  * @author joyabryan
@@ -14,9 +15,9 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
    // constructor
    public BasePlusCommissionEmployee(String firstName, String lastName, 
       String socialSecurityNumber, double grossSales,
-      double commissionRate, double baseSalary) {
+      double commissionRate, double baseSalary,Date birthDate) {
       super(firstName, lastName, socialSecurityNumber, 
-         grossSales, commissionRate);
+         grossSales, commissionRate,birthDate);
 
       if (baseSalary < 0.0) { // validate baseSalary                  
          throw new IllegalArgumentException("Base salary must be >= 0.0");
